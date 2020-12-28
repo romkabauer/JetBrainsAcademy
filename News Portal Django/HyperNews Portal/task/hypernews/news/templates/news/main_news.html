@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper news</title>
+</head>
+<body>
+    <h2>Hyper news</h2>
+    {% for news in news_batch %}
+        <h4>{{news.date}}</h4>
+    {% endfor %}
+    <a target="_blank" href="/news/create">Publish news</a>
+</body>
+</html>
