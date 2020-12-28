@@ -2,12 +2,11 @@ from django.shortcuts import render
 from django.conf import settings
 from django.views import View
 from django.http import Http404
-import json
+import json, datetime
 
 
 with open(settings.NEWS_JSON_PATH, "r") as f:
-    news_json = json.loads(f.read())
-    news_json = sorted(news_json, key=lambda k: k.get('created', 0), reverse=True)
+    news_json = sorted(json.loads(f.read()), key=lambda k: k.get('created', 0), reverse=True)
 
 
 class MainView(View):
@@ -34,8 +33,16 @@ class NewsView(View):
 
 class MainNewsView(View):
     def get(self, request, *args, **kwargs):
+        dates = sorted(list(set(
+                        [
+                            datetime.datetime.strptime(x['created'], '%Y-%m-%d %H:%M:%S').date()
+                            for x in news_json
+                        ]
+                    )), reverse=True)
+        dates = [str(x) for x in dates]
         return render(
             request, 'news/main_news.html', context={
-                'news_batch': news_json
+                'news_batch': news_json,
+                'dates': dates
             }
         )

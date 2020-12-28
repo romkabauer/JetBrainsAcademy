@@ -6,9 +6,16 @@
 </head>
 <body>
     <h2>Hyper news</h2>
-    {% for news in news_batch %}
-        <h4>{{news.date}}</h4>
+    {% for date in dates %}
+        <h4>{{ date | slice:10 }}</h4>
+        <ul>
+            {% for news in news_batch %}
+                {% if news.created|slice:10 == date %}
+                    <li><a href="/news/{{news.link}}/" target="_blank">{{news.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     {% endfor %}
-    <a target="_blank" href="/news/create">Publish news</a>
+    <a target="_blank" href="/news/create/">Publish news</a>
 </body>
 </html>

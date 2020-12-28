@@ -63,9 +63,6 @@ files:
 - name: hypernews/news/tests.py
   visible: true
   learner_created: true
-- name: hypernews/news/templates/news/news_by_date.html
-  visible: true
-  learner_created: true
 - name: hypernews/news/templates/news/main_news.html
   visible: true
   learner_created: true
@@ -76,5 +73,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/102/stages/563/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 28 Dec 2020 11:39:02 UTC
 record: -1
