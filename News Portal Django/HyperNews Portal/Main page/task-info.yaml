@@ -1,0 +1,80 @@
+type: edu
+files:
+- name: base.py
+  visible: true
+  learner_created: true
+- name: hypernews/manage.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/apps.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/models.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/admin.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/__init__.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/migrations/__init__.py
+  visible: true
+  learner_created: true
+- name: hypernews/hypernews/__init__.py
+  visible: true
+  learner_created: true
+- name: hypernews/hypernews/wsgi.py
+  visible: true
+  learner_created: true
+- name: hstest/django_test.py
+  visible: true
+  learner_created: true
+- name: hstest/test_helper.py
+  visible: true
+  learner_created: true
+- name: hstest/test_case.py
+  visible: true
+  learner_created: true
+- name: hstest/exceptions.py
+  visible: true
+  learner_created: true
+- name: hstest/stage_test.py
+  visible: true
+  learner_created: true
+- name: hstest/check_result.py
+  visible: true
+  learner_created: true
+- name: news.json
+  visible: true
+  learner_created: true
+- name: tests.py
+  visible: true
+  learner_created: true
+- name: hypernews/hypernews/settings.py
+  visible: true
+  learner_created: true
+- name: hypernews/hypernews/urls.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/views.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/tests.py
+  visible: true
+  learner_created: true
+- name: hypernews/news/templates/news/main_news.html
+  visible: true
+  learner_created: true
+- name: hypernews/news/templates/news/index.html
+  visible: true
+  learner_created: true
+- name: hypernews/news/templates/news/news.html
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/projects/102/stages/563/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 28 Dec 2020 11:39:02 UTC
+record: -1

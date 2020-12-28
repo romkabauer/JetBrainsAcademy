@@ -186,9 +186,6 @@ files:
 - name: translator/de.txt
   visible: true
   learner_created: true
-- name: translator/__init__.py
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/99/stages/549/implement#comment
 status: Solved
 feedback:
