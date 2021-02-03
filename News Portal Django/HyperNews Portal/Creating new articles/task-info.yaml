@@ -1109,9 +1109,6 @@ files:
                 TestCase(attach=self.check_main_header),
                 TestCase(attach=self.check_main_page),
                 TestCase(attach=self.check_main_page_create_link),
-                # 4 task
-                TestCase(attach=self.check_creating_news),
-                TestCase(attach=self.check_create_page_main_link),
             ]
 
         def check(self, reply, attach):
@@ -1121,6 +1118,66 @@ files:
     if __name__ == '__main__':
         HyperNewsTestRunner('hypernews.manage').run_tests()
   learner_created: false
+- name: hypernews/news/templates/news/news.html
+  visible: true
+  text: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>News {{ news.link }}</title>
+    </head>
+    <body>
+        <h2>{{ news.title }}</h2>
+        <p>{{ news.created }}</p>
+        <p>{{ news.text }}</p>
+        <a target="_blank" href="/news/">Go to the main page</a>
+    </body>
+    </html>
+  learner_created: true
+- name: hypernews/news/templates/news/main_news.html
+  visible: true
+  text: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hyper news</title>
+    </head>
+    <body>
+        <h2>Hyper news</h2>
+        {% for date in dates %}
+            <h4>{{ date | slice:10 }}</h4>
+            <ul>
+                {% for news in news_batch %}
+                    {% if news.created|slice:10 == date %}
+                        <li><a href="/news/{{news.link}}/" target="_blank">{{news.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+        <a target="_blank" href="/news/create/">Publish news</a>
+    </body>
+    </html>
+  learner_created: true
+- name: hypernews/news/templates/news/index.html
+  visible: true
+  text: |
+    <!DOCTYPE html>
+    <title>News</title>
+
+    <h1>{{ message }}</h1>
+  learner_created: true
+- name: news.json
+  visible: true
+  text: '[{"created": "2020-02-09 14:15:10", "text": "Text of the news 1", "title":
+    "News 1", "link": 1}, {"created": "2020-02-10 14:15:10", "text": "Text of the
+    news 2", "title": "News 2", "link": 2}, {"created": "2020-02-09 16:15:10", "text":
+    "Text of the news 3", "title": "News 3", "link": 3}]'
+  learner_created: true
+- name: hypernews/news/templates/news/create_news.html
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/102/stages/564/implement#comment
 status: Unchecked
 record: -1

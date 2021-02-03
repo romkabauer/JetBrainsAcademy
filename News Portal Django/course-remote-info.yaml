@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/339506/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 28 Dec 2020 09:58:00 UTC
+update_date: Wed, 03 Feb 2021 13:25:01 UTC
 stages:
 - id: 561
   step: 9411
@@ -22,26 +22,10 @@ stages:
   is_completed: false
 topics:
   0:
-  - title: Introduction to OOP
-    theory_id: 3614
   - title: The concept of patterns
     theory_id: 3611
-  - title: Frameworks
-    theory_id: 6701
-  - title: World Wide Web
-    theory_id: 6633
-  - title: HyperText Transfer Protocol
-    theory_id: 6569
-  - title: HTTP URL
-    theory_id: 6740
-  - title: HTTP messages
-    theory_id: 6752
-  - title: Regexps basics
-    theory_id: 7580
-  - title: Intro to computational thinking
-    theory_id: 8742
-  - title: Components of computational thinking
-    theory_id: 8745
+  - title: Introduction to operating systems
+    theory_id: 9704
   - title: IDE
     theory_id: 10996
   - title: Introduction to Python
@@ -98,14 +82,6 @@ topics:
     theory_id: 6052
   - title: Exceptions
     theory_id: 6042
-  - title: Class
-    theory_id: 6661
-  - title: Class instances
-    theory_id: 6669
-  - title: Methods
-    theory_id: 6931
-  - title: Introduction to operating systems
-    theory_id: 9704
   - title: Command line overview
     theory_id: 8977
   - title: Parameters and options
@@ -116,10 +92,34 @@ topics:
     theory_id: 6277
   - title: Django MVC
     theory_id: 6285
+  - title: World Wide Web
+    theory_id: 6633
+  - title: HyperText Transfer Protocol
+    theory_id: 6569
+  - title: HTTP URL
+    theory_id: 6740
+  - title: HTTP messages
+    theory_id: 6752
   - title: Launching web server
     theory_id: 6651
+  - title: Class
+    theory_id: 6661
+  - title: Class instances
+    theory_id: 6669
+  - title: Methods
+    theory_id: 6931
   - title: Processing requests
     theory_id: 6472
+  - title: Introduction to OOP
+    theory_id: 3614
+  - title: Intro to computational thinking
+    theory_id: 8742
+  - title: Components of computational thinking
+    theory_id: 8745
+  - title: Frameworks
+    theory_id: 6701
+  - title: Regexps basics
+    theory_id: 7580
   - title: PyCharm basics
     theory_id: 6193
   - title: Basic data types
@@ -145,18 +145,24 @@ topics:
   1:
   - title: Files
     theory_id: 6989
-  - title: Design principles
-    theory_id: 8956
-  - title: Bugs and debugging
-    theory_id: 5504
-  - title: JSON
-    theory_id: 6854
   - title: Introduction to Python shell
     theory_id: 8133
   - title: Experiments with Python shell
     theory_id: 8238
+  - title: HTML basics
+    theory_id: 6434
+  - title: Tags and attributes
+    theory_id: 7536
+  - title: HTML page structure
+    theory_id: 6491
+  - title: Inline Elements
+    theory_id: 7518
   - title: Datetime module
     theory_id: 7324
+  - title: Django template language
+    theory_id: 6391
+  - title: Template filters
+    theory_id: 10006
   - title: Debugging in shell
     theory_id: 8244
   - title: Files in Python
@@ -169,18 +175,12 @@ topics:
     theory_id: 8702
   - title: Json module
     theory_id: 8999
-  - title: Django template language
-    theory_id: 6391
-  - title: Template filters
-    theory_id: 10006
-  - title: HTML basics
-    theory_id: 6434
-  - title: Tags and attributes
-    theory_id: 7536
-  - title: HTML page structure
-    theory_id: 6491
-  - title: Inline Elements
-    theory_id: 7518
+  - title: Bugs and debugging
+    theory_id: 5504
+  - title: JSON
+    theory_id: 6854
+  - title: Design principles
+    theory_id: 8956
   2:
   - title: Indexes
     theory_id: 6189
@@ -189,23 +189,21 @@ topics:
   - title: Template tags
     theory_id: 9998
   3:
-  - title: Domains
-    theory_id: 6911
   - title: Random module
     theory_id: 6263
-  - title: Submitting data
-    theory_id: 7332
+  - title: Domains
+    theory_id: 6911
   - title: Block-level elements
     theory_id: 7271
   - title: HTML attributes id and class
     theory_id: 7527
   - title: HTML forms
     theory_id: 6560
+  - title: Submitting data
+    theory_id: 7332
   4:
   - title: REST
     theory_id: 7834
-  - title: Static content
-    theory_id: 10052
   - title: Comments
     theory_id: 7502
   - title: What is CSS
@@ -214,3 +212,5 @@ topics:
     theory_id: 7418
   - title: Basic syntax
     theory_id: 7722
+  - title: Static content
+    theory_id: 10052
