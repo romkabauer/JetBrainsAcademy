@@ -1177,24 +1177,6 @@ files:
   learner_created: true
 - name: hypernews/news/templates/news/create_news.html
   visible: true
-  text: |
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Create News</title>
-    </head>
-    <body>
-        <form action="/create-news/" method="post">
-            <p>News Title</p>
-            <input type="text" name="news_title">
-            <p>News Body</p>
-            <input type="text" name="news_body">
-            <button type="submit">Post news</button>
-        </form>
-        <a target="_blank" href="/news/">Return to the main page</a>
-    </body>
-    </html>
   learner_created: true
 feedback_link: https://hyperskill.org/projects/102/stages/565/implement#comment
 status: Unchecked
