@@ -5,7 +5,9 @@
     <title>Create News</title>
 </head>
 <body>
-    <form action="/create-news/" method="post">
+    {% load static %}
+    <link rel="stylesheet" target="_blank" href="{% static 'css/base.css' %}">
+    <form action="/news/create/" method="post">{% csrf_token %}
         <p>News Title</p>
         <input type="text" name="news_title">
         <p>News Body</p>

@@ -20,22 +20,18 @@ def assign_news_id(news_list):
 def add_new_news(title, body):
     news_json.append(
         {
-            'created': str(datetime.datetime.now()),
-            'text': body,
-            'title': title,
-            'link': assign_news_id(news_json)
+            "created": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "text": body,
+            "title": title,
+            "link": assign_news_id(news_json)
         })
     with open(settings.NEWS_JSON_PATH, "w") as f:
-        f.write(str(news_json))
+        f.write(json.dumps(news_json))
 
 
 class MainView(View):
     def get(self, request, *args, **kwargs):
-        return render(
-            request, 'news/index.html', context={
-                'message': settings.MESSAGE
-            }
-        )
+        return redirect('/news/')
 
 class NewsView(View):
     def get(self, request, news_link, *args, **kwargs):
@@ -53,17 +49,27 @@ class NewsView(View):
 
 class MainNewsView(View):
     def get(self, request, *args, **kwargs):
+        news_filter = request.GET.get('q')
+        news_to_display = []
+        if news_filter != None:
+            for news in news_json:
+                if news['title'] == news_filter:
+                    news_to_display.append(news)
+        else:
+            news_to_display = news_json
+
         dates = sorted(list(set(
                         [
                             datetime.datetime.strptime(x['created'], '%Y-%m-%d %H:%M:%S').date()
-                            for x in news_json
+                            for x in news_to_display
                         ]
                     )), reverse=True)
         dates = [str(x) for x in dates]
+
         return render(
             request, 'news/main_news.html', context={
-                'news_batch': news_json,
-                'dates': dates
+                'news_batch': news_to_display,
+                'dates': dates,
             }
         )
 
@@ -72,4 +78,9 @@ class CreateNewsView(View):
         title = request.POST.get('news_title')
         body = request.POST.get('news_body')
         add_new_news(title, body)
-        return redirect('/create-news/')
+        return redirect('/news/create/')
+
+    def get(self, request, *args, **kwargs):
+        return render(
+            request, 'news/create_news.html'
+        )

@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from news.views import NewsView, MainView, MainNewsView, CreateNewsView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/<int:news_link>/', NewsView.as_view()),
     path('news/', MainNewsView.as_view()),
-    path('create-news/', CreateNewsView.as_view()),
+    path('news/create/', CreateNewsView.as_view()),
     path('', MainView.as_view())
 ]
+
+urlpatterns += static(settings.STATIC_URL)

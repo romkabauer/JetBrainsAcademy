@@ -5,6 +5,8 @@
     <title>News {{ news.link }}</title>
 </head>
 <body>
+    {% load static %}
+    <link rel="stylesheet" target="_blank" href="{% static 'css/base.css' %}">
     <h2>{{ news.title }}</h2>
     <p>{{ news.created }}</p>
     <p>{{ news.text }}</p>
