@@ -1,5 +1,8 @@
 # Jet Brains Academy Projects
 
+Overall todos:
+- split repos
+
 ## Simple banking system - completed
 Possible improvements:
 - add guids instead integer ids
