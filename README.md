@@ -1,13 +1,13 @@
 # Jet Brains Academy Projects
 
-## Simple banking system - complete
+## Simple banking system - completed
 Possible improvements:
 - add guids instead integer ids
 - connect postgres instead sqlite
 - add unit tests
 - add integration test
 
-## Multilingual translator - complete
+## Multilingual translator - completed
 Possible improvements:
 - try google api, if possible
 - try to implement as a telegram bot
@@ -16,7 +16,7 @@ Possible improvements:
 Notes:
 - user agent monitoring on reverso.context (why can't access directly?)
 
-## News portal
+## News portal - completed
 Possible improvements:
 - add a simple auth microserviceservice
 - oauth implementation
